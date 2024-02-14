@@ -293,7 +293,9 @@ public class QSContainerImpl extends FrameLayout implements
         layoutParams.topMargin  = topMargin;
         mQSPanelContainer.setLayoutParams(layoutParams);
 
-        mSideMargins = getResources().getDimensionPixelSize(R.dimen.notification_side_paddings);
+	if (Settings.System.getInt(getContext().getContentResolver(),
+                Settings.System.QS_THIN_PADDING, 0) == 1) mSideMargins = getResources().getDimensionPixelSize(R.dimen.thin_notification_side_paddings);
+	else mSideMargins = getResources().getDimensionPixelSize(R.dimen.notification_side_paddings);
         mContentPaddingStart = getResources().getDimensionPixelSize(
                 com.android.internal.R.dimen.notification_content_margin_start);
         int newPaddingEnd = getResources().getDimensionPixelSize(
