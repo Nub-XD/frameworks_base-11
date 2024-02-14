@@ -306,14 +306,15 @@ public class PixelPropsUtils {
     }
 
     private static void spoofBuildGms() {
-        // Alter build parameters to Nexus 5X for avoiding hardware attestation enforcement
-        setPropValue("DEVICE", "bullhead");
-        setPropValue("ID", "OPR6.170623.013");
-        setPropValue("FINGERPRINT", "google/bullhead/bullhead:8.0.0/OPR6.170623.013/4283548:user/release-keys");
-        setPropValue("MODEL", "Nexus 5X");
-        setPropValue("PRODUCT", "bullhead");
-        setVersionField("FIRST_SDK_INT", Build.VERSION_CODES.N);
-        setVersionFieldString("SECURITY_PATCH", "2017-08-05");
+        // Alter build parameters to Cat S60 for avoiding hardware attestation enforcement
+        setPropValue("BRAND", "Cat");
+        setPropValue("MANUFACTURER", "BullittGroupLimited");
+        setPropValue("DEVICE", "CatS60");
+        setPropValue("ID", "MMB29M");
+        setPropValue("FINGERPRINT", "Cat/CatS60/CatS60:6.0.1/MMB29M/LTE_D0201121.0_S60_0.031.02:user/release-keys");
+        setPropValue("MODEL", "S60");
+        setPropValue("PRODUCT", "CatS60");
+        setVersionFieldString("SECURITY_PATCH", "2017-03-01");
     }
 
     private static boolean isCallerSafetyNet() {
