@@ -312,7 +312,6 @@ public class PixelPropsUtils {
     }
 
     private static void spoofBuildGms() {
-        if (spoofBuildGms == null || spoofBuildGms.length == 0) return;
         // Alter build parameters for avoiding hardware attestation enforcement
         for (String spoof : spoofBuildGms) {
             String[] range = spoof.split(";");
