@@ -1125,9 +1125,7 @@ public class NotificationStackScrollLayout extends ViewGroup implements ScrollAd
                 R.dimen.min_top_overscroll_to_qs);
         mStatusBarHeight = res.getDimensionPixelSize(R.dimen.status_bar_height);
         mBottomMargin = res.getDimensionPixelSize(R.dimen.notification_panel_margin_bottom);
-	if (Settings.System.getInt(getContext().getContentResolver(),
-                Settings.System.QS_THIN_PADDING, 0) == 1) mSidePaddings = res.getDimensionPixelSize(R.dimen.thin_notification_side_paddings);
-	else mSidePaddings = res.getDimensionPixelSize(R.dimen.notification_side_paddings);
+        mSidePaddings = res.getDimensionPixelSize(R.dimen.notification_side_paddings);
         mMinInteractionHeight = res.getDimensionPixelSize(
                 R.dimen.notification_min_interaction_height);
         mCornerRadius = res.getDimensionPixelSize(

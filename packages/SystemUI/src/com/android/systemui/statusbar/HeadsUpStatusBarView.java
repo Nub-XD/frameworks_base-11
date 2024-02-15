@@ -23,7 +23,6 @@ import android.graphics.Point;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.os.Parcelable;
-import android.provider.Settings;
 import android.util.AttributeSet;
 import android.view.DisplayCutout;
 import android.view.View;
@@ -80,10 +79,8 @@ public class HeadsUpStatusBarView extends AlphaOptimizedLinearLayout {
             int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         Resources res = getResources();
-	if (Settings.System.getInt(getContext().getContentResolver(),
-                Settings.System.QS_THIN_PADDING, 0) == 1) mAbsoluteStartPadding = res.getDimensionPixelSize(R.dimen.thin_notification_side_paddings);
-	else mAbsoluteStartPadding = res.getDimensionPixelSize(R.dimen.notification_side_paddings);
-            mAbsoluteStartPadding = mAbsoluteStartPadding + res.getDimensionPixelSize(
+        mAbsoluteStartPadding = res.getDimensionPixelSize(R.dimen.notification_side_paddings)
+            + res.getDimensionPixelSize(
                     com.android.internal.R.dimen.notification_content_margin_start);
         mEndMargin = res.getDimensionPixelSize(
                 com.android.internal.R.dimen.notification_content_margin_end);

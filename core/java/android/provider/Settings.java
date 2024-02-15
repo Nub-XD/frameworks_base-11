@@ -10256,11 +10256,6 @@ public final class Settings {
         public static final String WINDOW_IGNORE_SECURE = "window_ignore_secure";
 
         /**
-         * Control whether QS_THIN_PADDING is thin or Normal
-         */
-        public static final String QS_THIN_PADDING = "qs_thin_padding";
-
-        /**
          * These entries are considered common between the personal and the managed profile,
          * since the managed profile doesn't get to change them.
          */
